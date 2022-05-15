@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whitefish, MT Homepage</title>
+    <style>
+      body {
+        background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+      }
+
+      h1 {
+        color: blue;
+      }
+      h2 {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1.6em;
+        font-weight: 500;
+      }
+
+      img {
+        border-radius: 20px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      p {
+        font-size: 15pt;
+        line-height: 1.5;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+        padding: 10px 20px;
+        color: white;
+        background-color: blue;
+        border: solid;
+        border-color: blue;
+        border-radius: 7px;
+        border-width: 1px;
+        box-shadow: 1px 1px 5px rgb(0, 0, 0);
+        transition: all 0.5s ease-in-out;
+      }
+      button:hover {
+        background-color: transparent;
+        color: blue;
+      }
+
+      .full-page {
+        margin: 0 auto;
+        max-width: 900px;
+        text-align: center;
+      }
+
+      .activies {
+        color: blue;
+      }
+
+      .footer {
+        font-size: 9pt;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="full-page">
+      <h1>Whitefish, MT</h1>
+      <h2>a treat all year around</h2>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/027/848/original/Whitefish-MT-fall-town-drone.jpg?1645561451"
+        alt="Skyview of Whitefish, MT in the fall."
+        width="500"
+      />
+      <p>
+        Whitefish is a resort town
+        <strong>in the Rocky Mountains of northwest Montana</strong>. It’s a
+        gateway to the jagged peaks, lakes and glacier-carved valleys of Glacier
+        National Park.
+      </p>
+      <p>
+        <span class="activies">Ski</span> and
+        <span class="activies">mountain-bike</span> trails wind downhill at
+        Whitefish Mountain Resort, just outside town. On Whitefish Lake, sandy
+        City Beach and Whitefish Lake State Park have
+        <span class="activies">boat launches</span> and
+        <span class="activies">picnic areas</span>. Downtown,
+        <span class="activies">shops</span> and
+        <span class="activies">eateries</span> line Central Avenue.
+      </p>
+      <a href="https://explorewhitefish.com/" target="_blank">
+        Learn more about Whitefish.</a
+      >
+      <br />
+      <button>Plan your next trip here with us.</button>
+      <br />
+      <hr />
+      <p>
+        <span class="footer"
+          >This page was built by <em>Evelin Padilla</em></span
+        >
+      </p>
+    </div>
+    <script>
+      function startPlanning() {
+        let name = prompt("What is your first name?");
+        let email = prompt("What is your email address?");
+        let season = prompt("What month/season are interested in visiting?");
+        let days = prompt("How many days do you plan to visit?");
+        if (days <= 2) {
+          alert(
+            "Short but sweet!" +
+              name +
+              ", we will be in touch soon via email with some awesome ideas for your trip to Whitefish."
+          );
+        } else {
+          alert(
+            "Awesome, " +
+              name +
+              "! We will be in touch soon via email with some awesome ideas for your trip to Whitefish."
+          );
+        }
+      }
+
+      let planTrip = document.querySelector("button");
+      planTrip.addEventListener("click", startPlanning);
+    </script>
+  </body>
+</html>
